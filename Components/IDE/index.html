@@ -33,52 +33,184 @@
 <body class="bg-[#F7F9FC] text-black min-h-screen font-sans flex flex-col">
 
   <!-- Sidebar -->
-  <aside class="fixed top-0 left-0 w-[70px] h-full bg-white text-black flex flex-col items-center py-6 space-y-6 shadow-lg z-10">
-    <div class="text-sm font-bold mb-4 flex items-center justify-center">
-      <img src="../assets/Group 31.svg" alt="Menu Icon" class="w-[33px] h-[33px]" />
-    </div>
+   
+      <aside class="fixed top-0 left-0 w-[72px] h-full bg-white flex flex-col justify-between items-center py-6 shadow-md z-10">
+  <!-- Top Logo -->
+  <div class="flex flex-col gap-8 text-gray-40">
+    <!-- Logo -->
+    <button class="w-10 h-10 flex items-center justify-center">
+      <img src="../../assets/Group 31.svg" alt="">
+    </button>
 
-    <!-- Sidebar Buttons -->
-    <div class="flex flex-col gap-4">
-      <button class="flex flex-col items-center gap-1 text-xs hover:text-blue-500 transition">
-        <img src="../assets/Menu (3).svg" alt="Home Icon" class="w-[24px] h-[24px]" />
+    <!-- Navigation Icons -->
+    <div class="flex flex-col gap-6 text-gray-400">
+      <button class="w-10 h-10 flex items-center justify-center hover:text-black">
+        <img src="../../assets/List Menu (1).svg" alt="" srcset="">
       </button>
-      <button class="flex flex-col items-center gap-1 text-xs hover:text-blue-500 transition">
-        <img src="../assets/Menu (3).svg" alt="Code Icon" class="w-[24px] h-[24px]" />
+      <button class="w-10 h-10 flex items-center justify-center hover:text-black">
+        <img src="../../assets/List Menu (2).svg" alt="" srcset="">
       </button>
-      <button class="flex flex-col items-center gap-1 text-xs hover:text-blue-500 transition">
-        <img src="../assets/Menu (3).svg" alt="Files Icon" class="w-[24px] h-[24px]" />
+      <button class="w-10 h-10 flex items-center justify-center text-white bg-[#7646FF] rounded-xl">
+        <img src="../../assets/List Menu.svg" alt="">
       </button>
-      <button class="flex flex-col items-center gap-1 text-xs hover:text-blue-500 transition">
-        <img src="../assets/Menu (3).svg" alt="Settings Icon" class="w-[24px] h-[24px]" />
+      <button class="w-10 h-10 flex items-center justify-center hover:text-black">
+        <i class="ph ph-headphones text-xl"></i>
+      </button>
+      <button class="w-10 h-10 flex items-center justify-center hover:text-black">
+        <i class="ph ph-gear text-xl"></i>
+      </button>
+      <button class="w-10 h-10 flex items-center justify-center hover:text-black">
+        <i class="ph ph-chat-dots text-xl"></i>
       </button>
     </div>
-  </aside>
+  </div>
+
+  <!-- Bottom Avatar -->
+  <div class="mt-[59px]">
+    <img src="https://i.pravatar.cc/150?img=32" alt="Avatar" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow" />
+  </div>
+</aside>
+
+
 
   <!-- Main content -->
   <div class="ml-[70px] flex-1 flex flex-col">
-
     <!-- Header -->
     <header class="flex items-center justify-between px-6 py-7">
-      <h1 class="text-2xl font-semibold text-black">Hello, João!</h1>
-      <input
-        class="text-neutral-300 w-[216px] h-[38px] px-4 rounded-[19px] bg-white border border-gray-300 text-sm"
-        type="search"
-        name="search"
-        placeholder="Search"
-      />
+      <h1 class="text-2xl font-semibold text-black ml-5">Hello, João!</h1>
+      <input class="text-neutral-300 w-[216px] h-[38px] px-4 mr-5 rounded-[19px] bg-white border border-gray-300 text-sm" type="search" placeholder="Search" />
     </header>
 
-    <!-- Colorful Bar -->
-    <section class="px-6">
-      <div class="w-full max-w-[1224px] h-[80px] rounded-xl bg-gradient-to-r from-blue-400 via-purple-300 to-yellow-200 mx-auto"></div>
+    <!-- Profile Section -->
+    <section class="px-6 -mt-4 mb-10">
+      <div class="max-w-[1200px] mx-auto rounded-xl overflow-hidden shadow-lg bg-white">
+        <div class="h-24 w-full bg-gradient-to-r from-blue-400 via-purple-300 to-yellow-200"></div>
+        <div class="p-6 space-y-6 -mt-4 relative z-10">
+
+          <!-- Top Info -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <img class="w-20 h-20 rounded-full border-4 border-white shadow-md object-cover" src="https://i.pravatar.cc/150?img=32" alt="João Tambue" />
+              <div>
+                <h2 class="text-lg font-semibold">João Tambue</h2>
+                <p class="text-sm text-gray-500">joaotambue13@gmail.com</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <button class="text-gray-600 hover:text-gray-800">
+                <i class="ph ph-sliders-horizontal text-2xl"></i>
+              </button>
+              <button id="editBtn" class="bg-primary text-white text-sm px-5 py-2 rounded-md hover:bg-blue-700 transition">
+                Edit
+              </button>
+            </div>
+          </div>
+
+          <!-- Form Fields -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm text-gray-500 font-medium">Full Name</label>
+              <input id="fullName" disabled class="editable w-full mt-1 px-4 py-2 border rounded-md text-sm bg-gray-50" placeholder="Your Full Name" />
+            </div>
+            <div>
+              <label class="text-sm text-gray-500 font-medium">Nick Name</label>
+              <input id="nickName" disabled class="editable w-full mt-1 px-4 py-2 border rounded-md text-sm bg-gray-50" placeholder="Your Nickname" />
+            </div>
+            <div>
+              <label class="text-sm text-gray-500 font-medium">Gender</label>
+              <select id="gender" disabled class="editable w-full mt-1 px-4 py-2 border rounded-md text-sm bg-gray-50">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-sm text-gray-500 font-medium">Country</label>
+              <select id="country" disabled class="editable w-full mt-1 px-4 py-2 border rounded-md text-sm bg-gray-50">
+                <option>Angola</option>
+                <option>Brazil</option>
+                <option>USA</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-sm text-gray-500 font-medium">Language</label>
+              <select id="language" disabled class="editable w-full mt-1 px-4 py-2 border rounded-md text-sm bg-gray-50">
+                <option>Portuguese</option>
+                <option>English</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-sm text-gray-500 font-medium">Time Zone</label>
+              <input id="timeZone" disabled class="editable w-full mt-1 px-4 py-2 border rounded-md text-sm bg-gray-50" placeholder="UTC+1" />
+            </div>
+          </div>
+
+          <!-- Email Section -->
+          <div>
+            <h3 class="text-sm font-semibold text-gray-700 mb-3">My email Address</h3>
+            <div class="p-4 rounded-md flex items-center gap-3 bg-white">
+              <i class="ph ph-envelope text-blue-500 text-xl"></i>
+              <div>
+                <p class="text-sm font-medium">joaotambue13@gmail.com</p>
+                <p class="text-xs text-gray-500">1 month ago</p>
+              </div>
+            </div>
+            <div class="bg-gray-100 mt-2 px-4 py-2 rounded-md">
+              <button class="w-[150px] h-[36px] rounded-[8px] bg-gray-100 text-sm text-blue-600 font-medium hover:underline">
+                + Add Email Address
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
+  </div>
 
-    <!-- Spacer for example -->
-    <div class="flex-1"></div>
+    <!-- Botão Flutuante de Suporte -->
+<div class="-mt-4 flex justify-end pr-10">
+  <button class="w-14 h-14 rounded-full bg-[#4B6FFF] shadow-lg flex items-center justify-center hover:bg-blue-600 transition">
+    <i class="ph ph-chat-centered-dots text-white text-2xl"></i>
+  </button>
+</div>
 
-    <!-- Footer -->
-   
 
+
+
+
+  <!-- Enable Editing & Save Data -->
+  <script>
+    const editBtn = document.getElementById('editBtn');
+    const fields = document.querySelectorAll('.editable');
+    let isEditing = false;
+
+    // Load saved values from localStorage
+    window.addEventListener('DOMContentLoaded', () => {
+      fields.forEach(field => {
+        const stored = localStorage.getItem(field.id);
+        if (stored) {
+          field.value = stored;
+        }
+      });
+    });
+
+    // Toggle edit/save mode
+    editBtn.addEventListener('click', () => {
+      isEditing = !isEditing;
+      editBtn.textContent = isEditing ? 'Save' : 'Edit';
+
+      fields.forEach(field => {
+        field.disabled = !isEditing;
+        field.classList.toggle('bg-white', isEditing);
+        field.classList.toggle('bg-gray-50', !isEditing);
+      });
+
+      if (!isEditing) {
+        fields.forEach(field => {
+          localStorage.setItem(field.id, field.value);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
