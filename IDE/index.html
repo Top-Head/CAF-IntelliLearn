@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Runner</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Highlight.js (Opcional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4B6FFF',
+            secondary: '#8A9EFF'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-[#F7F9FC] text-black min-h-screen font-sans flex flex-col">
+
+  <!-- Sidebar -->
+  <aside class="fixed top-0 left-0 w-[70px] h-full bg-white text-black flex flex-col items-center py-6 space-y-6 shadow-lg z-10">
+    <div class="text-sm font-bold mb-4 flex items-center justify-center">
+      <img src="../Group 31.svg" alt="Menu Icon" class="w-[33px] h-[33px]" />
+    </div>
+
+    <!-- Sidebar Buttons -->
+    <div class="flex flex-col gap-4">
+      <button class="flex flex-col items-center gap-1 text-xs hover:text-blue-500 transition">
+        <img src="../List Menu (3).svg" alt="Home Icon" class="w-[24px] h-[24px]" />
+      </button>
+      <button class="flex flex-col items-center gap-1 text-xs hover:text-blue-500 transition">
+        <img src="../List Menu (3).svg" alt="Code Icon" class="w-[24px] h-[24px]" />
+      </button>
+      <button class="flex flex-col items-center gap-1 text-xs hover:text-blue-500 transition">
+        <img src="../List Menu (3).svg" alt="Files Icon" class="w-[24px] h-[24px]" />
+      </button>
+      <button class="flex flex-col items-center gap-1 text-xs hover:text-blue-500 transition">
+        <img src="../List Menu (3).svg" alt="Settings Icon" class="w-[24px] h-[24px]" />
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <div class="ml-[70px] flex-1 flex flex-col">
+
+    <!-- Header -->
+    <header class="flex items-center justify-between px-6 py-7">
+      <h1 class="text-2xl font-semibold text-black">Hello, João!</h1>
+      <input
+        class="text-neutral-300 w-[216px] h-[38px] px-4 rounded-[19px] bg-white border border-gray-300 text-sm"
+        type="search"
+        name="search"
+        placeholder="Search"
+      />
+    </header>
+
+    <!-- Colorful Bar -->
+    <section class="px-6">
+      <div class="w-full max-w-[1224px] h-[80px] rounded-xl bg-gradient-to-r from-blue-400 via-purple-300 to-yellow-200 mx-auto"></div>
+    </section>
+
+    <!-- Spacer for example -->
+    <div class="flex-1"></div>
+
+    <!-- Footer -->
+    <footer class="bg-red-600 text-white text-center py-4">
+      <h1>ghahjhjfhskhjh</h1>
+    </footer>
+  </div>
+
+</body>
+</html>
