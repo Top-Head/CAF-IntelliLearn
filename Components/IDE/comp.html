@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAF-IntelliLearn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            darkbg: '#121212',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-darkbg text-white min-h-screen flex items-center justify-center">
+
+  <!-- Container: Holds both screens -->
+  <div id="auth-container" class="w-full max-w-md p-6 bg-[#1e1e1e] rounded-lg shadow-lg">
+    <!-- Registration screen by default -->
+    <div id="register-screen">
+      <h2 class="text-2xl font-semibold mb-6">Create an account</h2>
+      <form class="space-y-5">
+        <!-- Email -->
+        <div class="text-left">
+          <label class="text-sm font-medium mb-1 block">Email</label>
+          <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 bg-transparent border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-primary text-neutral-300 placeholder-neutral-500" />
+        </div>
+        <!-- Password -->
+        <div class="text-left">
+          <label class="text-sm font-medium mb-1 block">Password </label>
+          <div class="relative">
+            <input id="reg-password" type="password" placeholder="Enter your password" class="w-full px-4 py-2 pr-10 bg-transparent border border-gray-600 rounded text-neutral-300 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-primary" />
+            <button type="button" onclick="togglePassword('reg-password', 'reg-eye')" class="absolute right-3 top-2.5 text-gray-400 hover:text-white">
+              <svg id="reg-eye" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <button type="submit" class="w-full py-2 rounded bg-primary text-white font-semibold hover:bg-blue-700 transition">Create account</button>
+        <button type="button" class="w-full flex items-center justify-center gap-2 py-2 rounded bg-gray-800 text-white border border-gray-600 hover:bg-gray-700 transition">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-5 h-5" /> Continue with Google
+        </button>
+      </form>
+      <p class="text-sm text-center mt-6 text-gray-400">Already Have An Account ? <a href="#" id="to-login" class="text-white hover:underline">Log In</a></p>
+    </div>
+
+    <!-- Login screen -->
+    <div id="login-screen" class="hidden">
+      <h2 class="text-2xl font-semibold mb-6">Login to your account</h2>
+      <form class="space-y-5">
+        <div class="text-left">
+          <label class="text-sm font-medium mb-1 block">Email</label>
+          <input type="email" class="w-full px-4 py-2 bg-transparent border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-primary text-neutral-300 placeholder-neutral-500" placeholder="Enter your Email"" />
+        </div>
+        <div class="text-left">
+          <label class="text-sm font-medium mb-1 block">Password <span class="float-right text-sm text-gray-400 hover:text-white cursor-pointer">Forgot ?</span></label>
+          <div class="relative">
+            <input id="login-password" type="password" placeholder="Enter your password" class="w-full px-4 py-2 pr-10 bg-transparent border border-gray-600 rounded text-neutral-300 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-primary" />
+            <button type="button" onclick="togglePassword('login-password', 'login-eye')" class="absolute right-3 top-2.5 text-gray-400 hover:text-white">
+              <svg id="login-eye" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <button type="submit" class="w-full py-2 rounded bg-primary text-white font-semibold hover:bg-blue-700 transition">Login now</button>
+      </form>
+      <p class="text-sm text-center mt-6 text-gray-400">Don't Have An Account ? <a href="#" id="to-register" class="text-white hover:underline">Sign Up</a></p>
+    </div>
+  </div>
+
+  <script src="script/main.js"></script>
+</body>
+</html>
